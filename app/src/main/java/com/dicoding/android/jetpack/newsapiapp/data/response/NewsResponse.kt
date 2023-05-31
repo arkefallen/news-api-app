@@ -1,6 +1,8 @@
 package com.dicoding.android.jetpack.newsapiapp.data.response
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 data class IndonesiaLiveNewsResponse(
 
@@ -14,6 +16,7 @@ data class IndonesiaLiveNewsResponse(
 	val status: String
 )
 
+@Parcelize
 data class ArticlesItem(
 
 	@field:SerializedName("publishedAt")
@@ -23,10 +26,10 @@ data class ArticlesItem(
 	val author: String? = null,
 
 	@field:SerializedName("urlToImage")
-	val urlToImage: Any? = null,
+	val urlToImage: String? = null,
 
 	@field:SerializedName("description")
-	val description: Any? = null,
+	val description: String? = null,
 
 	@field:SerializedName("source")
 	val source: Source? = null,
@@ -38,9 +41,10 @@ data class ArticlesItem(
 	val url: String? = null,
 
 	@field:SerializedName("content")
-	val content: Any? = null
-)
+	val content: String? = null
 
+) : Parcelable
+@Parcelize
 data class Source(
 
 	@field:SerializedName("name")
@@ -48,4 +52,4 @@ data class Source(
 
 	@field:SerializedName("id")
 	val id: String? = null
-)
+) : Parcelable

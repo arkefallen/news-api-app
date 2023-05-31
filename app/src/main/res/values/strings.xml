@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NewsAPIApp</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
 </resources>
